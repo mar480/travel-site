@@ -365,6 +365,10 @@ img{
   height:auto;
 
 }
+*{
+-webkit-box-sizing:border-box;
+        box-sizing:border-box;
+}
 .large-hero {
   position: relative;
   border-bottom: 10px solid #2f5572;
@@ -387,7 +391,7 @@ img{
     font-size: 2.4rem;
     margin: 0;
   }
-@media (min-width: 530px){
+@media (min-width: 530px) {
 .large-hero__title {
       font-size: 4.8rem
   }
@@ -398,7 +402,7 @@ img{
     font-size: 1.5rem;
     margin: 0;
   }
-@media (min-width: 530px){
+@media (min-width: 530px) {
 .large-hero__subtitle {
       font-size: 2.9rem
   }
@@ -412,7 +416,7 @@ img{
     margin-left: auto;
     margin-right: auto;
   }
-@media (min-width: 530px){
+@media (min-width: 530px) {
 .large-hero__description {
       font-size: 1.875rem
   }
@@ -430,7 +434,7 @@ img{
 .btn--large{
     padding: 1.1rem 1.9rem;
   }
-@media (min-width: 530px){
+@media (min-width: 530px) {
 .btn--large{
       font-size: 1.25rem
   }
@@ -438,21 +442,30 @@ img{
 .wrapper {
   padding-left: 18px;
   padding-right: 18px;
-  max-width: 1200px;
+  max-width: 1236px;
   margin-left: auto;
   margin-right: auto;
+  overflow: hidden;
 }
 .wrapper--medium {
     max-width: 976px;
   }
-.wrapper .wrapper{
+.wrapper .wrapper {
     padding-left: 0;
     padding-right: 0;
+  }
+.wrapper--b-margin {
+    margin-bottom: 1rem;
+  }
+@media (min-width: 530px) {
+.wrapper--b-margin {
+      margin-bottom: 3.875rem
+  }
   }
 .page-section {
   padding: 1.2rem 0;
 }
-@media (min-width: 800px){
+@media (min-width: 800px) {
 .page-section {
     padding: 4.5rem 0
 }
@@ -466,7 +479,7 @@ img{
   font-size: 1.9rem;
   color: #2f5572;
 }
-@media (min-width: 530px){
+@media (min-width: 530px) {
 .headline {
     font-size: 2.875rem
 }
@@ -480,7 +493,7 @@ img{
 .headline--small {
     font-size: 1.2rem;
   }
-@media (min-width: 530px){
+@media (min-width: 530px) {
 .headline--small {
       font-size: 1.875rem
   }
@@ -501,4 +514,32 @@ img{
   }
 .headline--b-margin-small {
     margin-bottom: 0em;
+  }
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.row--gutters {
+    margin-right: -65px;
+  }
+.row--gutters>div {
+    padding-right: 65px;
+  }
+@media (min-width: 800px) {
+    .row__medium-4 {
+      float: left;
+      width: 33.33%;
+    }
+    .row__medium-8 {
+      float: left;
+      width: 66.67%;
+    }
+    .row__medium-4--larger {
+      width: 37%;
+    }
+    .row__medium-8--smaller {
+      float: left;
+      width: 63%;
+    }
   }
